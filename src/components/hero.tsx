@@ -3,6 +3,7 @@ import CustomButton from "@/components/custom-button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { IKVideo } from "imagekitio-next";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState(1);
     const [hasClicked, setHasClicked] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [loadedVideos, setLoadedVideos] = useState(0);
 
     const totalVideos = 4;
@@ -20,11 +21,10 @@ export default function Hero() {
 
     const nextVideoRef = useRef<HTMLVideoElement>(null);
 
-    const getVideos = (index: number) => `https://ik.imagekit.io/sharull/zentry/videos/hero-${index}.mp4`;
+    const getVideos = (index: number) => `/zentry/videos/hero-${index}.mp4`;
 
     const handleVideoClick = () => {
         setHasClicked(true);
-        console.log("video clicked");
         setCurrentIndex((prev) => (prev % totalVideos) + 1);
     };
 
@@ -85,7 +85,6 @@ export default function Hero() {
         <div className="relative h-dvh w-screen overflow-x-hidden">
             {isLoading && (
                 <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
-                    {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
                     <div className="three-body">
                         <div className="three-body__dot"></div>
                         <div className="three-body__dot"></div>
@@ -98,7 +97,7 @@ export default function Hero() {
                     <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
                         <div
                             onClick={handleVideoClick}
-                            className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+                            className="origin-center scale-50 rounded-lg transition-all duration-500 ease-in hover:scale-100"
                         >
                             <video
                                 id="current-video"
@@ -107,7 +106,7 @@ export default function Hero() {
                                 onLoadedData={handleVideoLoad}
                                 loop
                                 muted
-                                className="size-64 origin-center scale-150 object-cover object-center"
+                                className="size-64 origin-center scale-150 rounded-lg object-cover object-center"
                             />
                         </div>
                     </div>
