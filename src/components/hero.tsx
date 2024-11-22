@@ -3,7 +3,6 @@ import CustomButton from "@/components/custom-button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { IKVideo } from "imagekitio-next";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 
