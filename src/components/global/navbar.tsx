@@ -75,7 +75,7 @@ const NavBar = () => {
                 <nav className="flex size-full items-center justify-between p-4">
                     {/* Logo and Product button */}
                     <div className="flex items-center gap-7">
-                        <img src="/img/logo.png" alt="logo" className="w-10" />
+                        <img src="https://ik.imagekit.io/sharull/zentry/images/logo.png" alt="logo" className="w-10" />
 
                         <CustomButton
                             id="product-button"
@@ -97,7 +97,12 @@ const NavBar = () => {
                         </div>
 
                         <button onClick={toggleAudioIndicator} className="ml-10 flex items-center space-x-0.5">
-                            <audio ref={audioElementRef} className="hidden" src="/audio/loop.mp3" loop />
+                            <audio
+                                ref={audioElementRef}
+                                className="hidden"
+                                src="https://ik.imagekit.io/sharull/zentry/audio/loop.mp3"
+                                loop
+                            />
                             {[1, 2, 3, 4].map((bar) => (
                                 <div
                                     key={bar}

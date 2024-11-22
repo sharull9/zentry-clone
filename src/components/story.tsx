@@ -65,7 +65,7 @@ const Story = () => {
                                     onMouseLeave={handleMouseLeave}
                                     onMouseUp={handleMouseLeave}
                                     onMouseEnter={handleMouseLeave}
-                                    src="/img/entrance.webp"
+                                    src="https://ik.imagekit.io/sharull/zentry/images/entrance.webp"
                                     alt="entrance.webp"
                                     className="object-contain"
                                 />

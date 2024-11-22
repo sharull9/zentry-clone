@@ -47,7 +47,7 @@ export default function About() {
             <div className="relative h-dvh w-screen" id="clip">
                 <div className="mask-clip-path about-image">
                     <img
-                        src="/img/about.webp"
+                        src="https://ik.imagekit.io/sharull/zentry/images/about.webp"
                         alt="Background"
                         className="absolute left-0 top-0 size-full object-cover"
                     />
