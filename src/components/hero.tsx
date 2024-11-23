@@ -28,7 +28,10 @@ export default function Hero() {
     };
 
     useEffect(() => {
-        if (loadedVideos === totalVideos - 1) setIsLoading(false);
+        if (loadedVideos === totalVideos - 1) {
+            setIsLoading(false);
+            setHasClicked(true);
+        }
     }, [loadedVideos]);
 
     useGSAP(
