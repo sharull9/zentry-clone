@@ -20,7 +20,7 @@ export default function Hero() {
 
     const nextVideoRef = useRef<HTMLVideoElement>(null);
 
-    const getVideos = (index: number) => `/zentry/videos/hero-${index}.mp4`;
+    const getVideos = (index: number) => `https://ik.imagekit.io/sharull/zentry/videos/hero-${index}.mp4`;
 
     const handleVideoClick = () => {
         setHasClicked(true);
