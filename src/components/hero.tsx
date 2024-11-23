@@ -109,7 +109,7 @@ export default function Hero() {
                         onLoadedData={handleVideoLoad}
                         loop
                         muted
-                        className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
+                        className="absolute-center invisible absolute z-20 size-64 border-2 border-black object-cover object-center"
                     />
                     <video
                         src={getVideos(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
